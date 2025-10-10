@@ -1,0 +1,35 @@
+<h1>New Member</h1>
+
+<%= form_with(model: @member, local: true) do |form| %>
+  <% if @member.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@member.errors.count, "error") %> 4 error prohibited this member from being saved:</h2>
+      <ul>
+        <% @member.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :height %>
+    <%= form.number_field :height %>
+  </div>
+
+  <div>
+    <%= form.label :weight %>
+    <%= form.number_field :weight %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
+
+<%= link_to 'Back', members_path %>
