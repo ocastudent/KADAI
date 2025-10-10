@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get "articles/new"
   post 'articles',to:'articles#create'
   get 'articles',to:'articles#index'
+  root 'articles#index'
   get'articles/:id',to:'articles#show',as: 'article'
   get 'articles/:id/edit', to: 'articles#edit', as: 'edit_article'
   patch 'articles/:id', to: 'articles#update'
