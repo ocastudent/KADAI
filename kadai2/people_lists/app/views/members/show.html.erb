@@ -1,10 +1,22 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @member %>
+<p>
+  <strong>Name:</strong>
+  <%= @member.name %>
+</p>
+
+<p>
+  <strong>Height:</strong>
+  <%= @member.height %>
+</p>
+
+<p>
+  <strong>Weight:</strong>
+  <%= @member.weight %>
+</p>
 
 <div>
   <%= link_to "Edit this member", edit_member_path(@member) %> |
   <%= link_to "Back to members", members_path %>
-
   <%= button_to "Destroy this member", @member, method: :delete %>
 </div>

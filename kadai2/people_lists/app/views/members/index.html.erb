@@ -6,9 +6,9 @@
 
 <div id="members">
   <% @members.each do |member| %>
-    <%= render member %>
     <p>
-      <%= link_to "Show this member", member %>
+      <strong><%= member.name %></strong>
+      (<%= link_to "Show this member", member %>)
     </p>
   <% end %>
 </div>

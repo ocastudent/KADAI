@@ -67,4 +67,9 @@ class MembersController < ApplicationController
     def member_params
       params.fetch(:member, {})
     end
+
+    def member_params
+      params.require(:member).permit(:name, :height, :weight)
+    end
+
 end
